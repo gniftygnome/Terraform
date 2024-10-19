@@ -18,7 +18,7 @@ public final class PillarLogHelper {
 	 * @param color Map color for all faces of log
 	 * @return New AbstractBlock.Settings
 	 */
-	public static AbstractBlock.Settings settings(MapColor color) {
+	public static AbstractBlock.Settings createSettings(MapColor color) {
 		return AbstractBlock.Settings.create()
 				.mapColor(color)
 				.instrument(NoteBlockInstrument.BASS)
@@ -35,7 +35,7 @@ public final class PillarLogHelper {
 	 * @param bark Map color for bark faces of log (sides)
 	 * @return New AbstractBlock.Settings
 	 */
-	public static AbstractBlock.Settings settings(MapColor wood, MapColor bark) {
+	public static AbstractBlock.Settings createSettings(MapColor wood, MapColor bark) {
 		return AbstractBlock.Settings.create()
 				.mapColor((state) -> Direction.Axis.Y.equals(state.get(PillarBlock.AXIS)) ? wood : bark)
 				.instrument(NoteBlockInstrument.BASS)
@@ -51,7 +51,7 @@ public final class PillarLogHelper {
 	 * @param color Map color for all faces of stem
 	 * @return New AbstractBlock.Settings
 	 */
-	public static AbstractBlock.Settings settingsNether(MapColor color) {
+	public static AbstractBlock.Settings createNetherSettings(MapColor color) {
 		return AbstractBlock.Settings.create()
 				.mapColor(color)
 				.instrument(NoteBlockInstrument.BASS)
@@ -67,7 +67,7 @@ public final class PillarLogHelper {
 	 * @param bark Map color for bark faces of stem (sides)
 	 * @return New AbstractBlock.Settings
 	 */
-	public static AbstractBlock.Settings settingsNether(MapColor wood, MapColor bark) {
+	public static AbstractBlock.Settings createNetherSettings(MapColor wood, MapColor bark) {
 		return AbstractBlock.Settings.create()
 				.mapColor((state) -> Direction.Axis.Y.equals(state.get(PillarBlock.AXIS)) ? wood : bark)
 				.instrument(NoteBlockInstrument.BASS)
