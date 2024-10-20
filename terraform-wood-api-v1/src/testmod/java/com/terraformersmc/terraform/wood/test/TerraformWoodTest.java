@@ -43,7 +43,7 @@ public class TerraformWoodTest implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Block customLog = new PillarBlock(PillarLogHelper.settings(MapColor.RED, MapColor.BLUE).registryKey(RegistryKey.of(RegistryKeys.BLOCK, CUSTOM_LOG_ID)));
+		Block customLog = new PillarBlock(PillarLogHelper.createSettings(MapColor.RED, MapColor.BLUE).registryKey(RegistryKey.of(RegistryKeys.BLOCK, CUSTOM_LOG_ID)));
 		Block customPlanks = new Block(AbstractBlock.Settings.create().mapColor(MapColor.RED).registryKey(RegistryKey.of(RegistryKeys.BLOCK, CUSTOM_PLANKS_ID)));
 
 		BlockItem customLogItem = new BlockItem(customLog, new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, CUSTOM_LOG_ID)));
